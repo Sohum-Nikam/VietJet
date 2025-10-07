@@ -1,0 +1,292 @@
+@import url('https://fonts.googleapis.com/css2?family=Fredoka:wght@300;400;500;600;700&display=swap');
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* Gamified E-Learning App Design System
+   Two themes: Fresh Green & Sky Blue
+   All colors in HSL for consistency
+*/
+
+@layer base {
+  :root {
+    /* Fresh Green Theme (default) */
+    --background: 0 0% 100%;
+    --foreground: 150 25% 15%;
+    
+    --card: 0 0% 100%;
+    --card-foreground: 150 25% 15%;
+    
+    --popover: 0 0% 100%;
+    --popover-foreground: 150 25% 15%;
+    
+    /* Playful green primary */
+    --primary: 142 76% 45%;
+    --primary-foreground: 0 0% 100%;
+    --primary-glow: 142 76% 65%;
+    
+    /* Soft mint secondary */
+    --secondary: 150 45% 92%;
+    --secondary-foreground: 150 25% 25%;
+    
+    /* Muted backgrounds */
+    --muted: 140 30% 96%;
+    --muted-foreground: 150 15% 45%;
+    
+    /* Warm accent */
+    --accent: 45 95% 60%;
+    --accent-foreground: 150 25% 15%;
+    
+    /* Success & error states */
+    --success: 142 76% 45%;
+    --success-foreground: 0 0% 100%;
+    --error: 0 84% 60%;
+    --error-foreground: 0 0% 100%;
+    
+    --destructive: 0 84% 60%;
+    --destructive-foreground: 0 0% 100%;
+    
+    --border: 150 25% 88%;
+    --input: 150 25% 88%;
+    --ring: 142 76% 45%;
+    
+    --radius: 1rem;
+    
+    /* Gamification colors */
+    --xp-bar: 45 95% 60%;
+    --badge-gold: 45 95% 55%;
+    --badge-silver: 0 0% 75%;
+    --badge-bronze: 25 75% 50%;
+    
+    /* Gradients */
+    --gradient-primary: linear-gradient(135deg, hsl(142 76% 45%), hsl(142 76% 65%));
+    --gradient-success: linear-gradient(135deg, hsl(142 76% 45%), hsl(160 85% 55%));
+    --gradient-background: linear-gradient(180deg, hsl(150 45% 98%), hsl(150 45% 92%));
+    
+    /* Shadows with color */
+    --shadow-sm: 0 2px 8px hsl(142 76% 45% / 0.1);
+    --shadow-md: 0 4px 16px hsl(142 76% 45% / 0.15);
+    --shadow-lg: 0 8px 32px hsl(142 76% 45% / 0.2);
+    --shadow-glow: 0 0 24px hsl(142 76% 65% / 0.4);
+    
+    /* Animation timing */
+    --transition-smooth: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+    --transition-bounce: all 0.5s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+  }
+  
+  .theme-blue {
+    /* Sky Blue Theme */
+    --primary: 200 85% 50%;
+    --primary-foreground: 0 0% 100%;
+    --primary-glow: 200 85% 70%;
+    
+    --secondary: 200 55% 92%;
+    --secondary-foreground: 200 25% 25%;
+    
+    --muted: 200 40% 96%;
+    --muted-foreground: 200 15% 45%;
+    
+    --accent: 280 75% 60%;
+    --accent-foreground: 0 0% 100%;
+    
+    --success: 142 76% 45%;
+    --error: 0 84% 60%;
+    
+    --border: 200 25% 88%;
+    --input: 200 25% 88%;
+    --ring: 200 85% 50%;
+    
+    --gradient-primary: linear-gradient(135deg, hsl(200 85% 50%), hsl(200 85% 70%));
+    --gradient-success: linear-gradient(135deg, hsl(142 76% 45%), hsl(200 85% 55%));
+    --gradient-background: linear-gradient(180deg, hsl(200 55% 98%), hsl(200 55% 92%));
+    
+    --shadow-sm: 0 2px 8px hsl(200 85% 50% / 0.1);
+    --shadow-md: 0 4px 16px hsl(200 85% 50% / 0.15);
+    --shadow-lg: 0 8px 32px hsl(200 85% 50% / 0.2);
+    --shadow-glow: 0 0 24px hsl(200 85% 70% / 0.4);
+  }
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+
+  body {
+    @apply bg-background text-foreground font-fredoka antialiased;
+    background: var(--gradient-background);
+  }
+  
+  h1, h2, h3, h4, h5, h6 {
+    @apply font-fredoka font-semibold;
+  }
+}
+
+@layer utilities {
+  /* Animation utilities */
+  .animate-bounce-in {
+    animation: bounceIn 0.6s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+  }
+  
+  .animate-scale-in {
+    animation: scaleIn 0.3s ease-out;
+  }
+  
+  .animate-slide-up {
+    animation: slideUp 0.4s ease-out;
+  }
+  
+  .animate-confetti {
+    animation: confetti 0.8s ease-out;
+  }
+  
+  .animate-pulse-glow {
+    animation: pulseGlow 2s ease-in-out infinite;
+  }
+  
+  /* Interactive hover effects */
+  .hover-lift {
+    @apply transition-transform duration-200;
+  }
+  
+  .hover-lift:hover {
+    @apply -translate-y-1 shadow-lg;
+  }
+  
+  .hover-scale {
+    @apply transition-transform duration-200;
+  }
+  
+  .hover-scale:hover {
+    @apply scale-105;
+  }
+  
+  .hover-glow:hover {
+    box-shadow: var(--shadow-glow);
+  }
+  
+  /* Custom shadows */
+  .shadow-game {
+    box-shadow: var(--shadow-md);
+  }
+  
+  .shadow-game-lg {
+    box-shadow: var(--shadow-lg);
+  }
+}
+
+@layer components {
+  /* Playful button base */
+  .btn-game {
+    @apply px-6 py-3 rounded-2xl font-medium transition-all duration-200;
+    @apply hover:scale-105 active:scale-95;
+    box-shadow: var(--shadow-sm);
+  }
+  
+  .btn-game:hover {
+    box-shadow: var(--shadow-md);
+  }
+  
+  /* XP Bar */
+  .xp-bar {
+    @apply relative h-6 bg-secondary rounded-full overflow-hidden;
+  }
+  
+  .xp-bar-fill {
+    @apply h-full rounded-full transition-all duration-500;
+    background: var(--gradient-primary);
+  }
+  
+  /* Badge styles */
+  .badge-achievement {
+    @apply inline-flex items-center gap-2 px-4 py-2 rounded-full;
+    @apply bg-gradient-to-r from-primary to-primary-glow;
+    @apply text-primary-foreground font-medium;
+    @apply shadow-game animate-scale-in;
+  }
+  
+  /* Quiz option card */
+  .quiz-option {
+    @apply p-4 rounded-2xl border-2 border-border;
+    @apply transition-all duration-200 cursor-pointer;
+    @apply hover:border-primary hover:shadow-game hover:scale-[1.02];
+  }
+  
+  .quiz-option.selected {
+    @apply border-primary bg-primary/10;
+  }
+  
+  .quiz-option.correct {
+    @apply border-success bg-success/10;
+  }
+  
+  .quiz-option.incorrect {
+    @apply border-error bg-error/10;
+  }
+}
+
+@keyframes bounceIn {
+  0% {
+    opacity: 0;
+    transform: scale(0.3);
+  }
+  50% {
+    opacity: 1;
+    transform: scale(1.05);
+  }
+  70% {
+    transform: scale(0.9);
+  }
+  100% {
+    transform: scale(1);
+  }
+}
+
+@keyframes scaleIn {
+  0% {
+    opacity: 0;
+    transform: scale(0.95);
+  }
+  100% {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
+
+@keyframes slideUp {
+  0% {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes confetti {
+  0% {
+    opacity: 0;
+    transform: scale(0) rotate(0deg);
+  }
+  50% {
+    opacity: 1;
+    transform: scale(1.2) rotate(180deg);
+  }
+  100% {
+    opacity: 0;
+    transform: scale(1) rotate(360deg);
+  }
+}
+
+@keyframes pulseGlow {
+  0%, 100% {
+    opacity: 1;
+    box-shadow: 0 0 20px hsl(var(--primary) / 0.3);
+  }
+  50% {
+    opacity: 0.8;
+    box-shadow: 0 0 40px hsl(var(--primary) / 0.5);
+  }
+}
