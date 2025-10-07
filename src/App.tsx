@@ -11,6 +11,7 @@ import Quiz from "./pages/Quiz";
 import Results from "./pages/Results";
 import Learning from "./pages/Learning.tsx";
 import NotFound from "./pages/NotFound";
+import ComingSoon from "./pages/ComingSoon.tsx";
 
 const queryClient = new QueryClient();
 
@@ -28,6 +29,7 @@ const App = () => (
             <Route path="/quiz" element={<Quiz />} />
             <Route path="/results" element={<Results />} />
             <Route path="/learning" element={<Learning />} />
+            <Route path="/coming-soon" element={<ComingSoon />} />
             {/* ADD ALL CUSTOM ROUTES ABOVE THE CATCH-ALL "*" ROUTE */}
             <Route path="*" element={<NotFound />} />
           </Routes>

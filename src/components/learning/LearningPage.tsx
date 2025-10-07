@@ -45,8 +45,12 @@ export const LearningPage: React.FC<LearningPageProps> = ({
     const subject = searchParams.get('subject') as Subject;
     const module = searchParams.get('module');
     const lesson = searchParams.get('lesson');
+    const forceGradeSelect = searchParams.get('gradeSelect');
 
-    if (grade) {
+    if (forceGradeSelect) {
+      setCurrentView('grade-selection');
+      setSelectedGrade(null);
+    } else if (grade) {
       setSelectedGrade(parseInt(grade));
       setCurrentView(subject ? 'module-board' : 'subject-selection');
     } else if (progress.currentGrade) {
@@ -235,7 +239,7 @@ export const LearningPage: React.FC<LearningPageProps> = ({
             <GradeOverlay
               isVisible={true}
               onGradeSelect={handleGradeSelect}
-              onClose={() => {}} // Required for grade selection
+              onClose={() => {}}
               userAge={12} // Would come from user profile
               requireParentConfirm={false}
             />

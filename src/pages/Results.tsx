@@ -22,7 +22,13 @@ const avatarMap: Record<string, string> = {
 const Results = () => {
   const navigate = useNavigate();
   const [profile, setProfile] = useState<UserProfile | null>(null);
-  const [result, setResult] = useState<any>(null);
+  type SimpleResult = {
+    score: number;
+    correctAnswers: number;
+    percentage: number;
+    category: 'Builder' | 'Explorer' | 'Innovator';
+  };
+  const [result, setResult] = useState<SimpleResult | null>(null);
 
   useEffect(() => {
     const savedProfile = localStorage.getItem('userProfile');
@@ -233,7 +239,7 @@ const Results = () => {
             size="lg"
             variant="secondary"
             className="btn-game"
-            disabled
+            onClick={() => navigate('/learning?gradeSelect=1')}
           >
             Start Learning Journey
           </Button>

@@ -107,6 +107,8 @@ const ModuleBoard: React.FC<ModuleBoardProps> = ({
     // Add a small delay for the selection animation
     setTimeout(() => {
       onModuleSelect(moduleId);
+      // Redirect to coming soon placeholder for all modules
+      window.location.href = '/coming-soon';
     }, 200);
   };
 
