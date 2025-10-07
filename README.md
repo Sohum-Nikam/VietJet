@@ -1,74 +1,24 @@
-# Welcome to your Lovable project
+# Team BrainQuest
 
-## Project info
+# BrainQuest — Personalized AI-Powered Learning Platform
+BrainQuest is an adaptive e-learning platform that revolutionizes the way children learn by tailoring educational content to their unique brain and learning styles. Moving beyond the traditional one-size-fits-all approach, BrainQuest leverages AI-driven brain assessments to understand each child’s cognitive abilities and places them on one of three customized learning journeys: Builder, Explorer, or Innovator.
 
-**URL**: https://lovable.dev/projects/823f7212-8bab-469e-bb0f-1a59745c7088
+Once categorized, students embark on a fully personalized and gamified learning experience that dynamically adapts to their pace and potential. Subjects such as Maths, Science, Geography, and EVS are brought to life through interactive animations, seamless transitions, engaging video lectures, and adaptive quizzes — all carefully designed to make learning both effective and enjoyable.
 
-## How can I edit this code?
+# Key Features
+	•	AI-Based Brain Assessment: Accurately identifies each child’s learning profile and optimal approach.
+	•	Adaptive Learning Modules: Lessons and quizzes dynamically adjust to the child’s cognitive ability.
+	•	Engaging and Gamified Experience: Interactive UI and game-like elements make learning motivating and immersive.
+	•	Comprehensive Subject Modules: Interactive lessons with video lectures, transcripts, and practice quizzes.
+	•	Progress Insights: Detailed analytics to track learning pace, quiz performance, and long-term improvement.
+	•	Neuro-Learning Model: Guides children to understand not only what to learn, but how they learn best.
 
-There are several ways of editing your application.
+# Vision:
+BrainQuest aims to make education truly personal, inclusive, and engaging by adapting to the unique learning style of every child. The long-term vision is to build a global neuro-learning ecosystem, empowering millions of students to unlock their fullest potential through personalized, AI-driven learning journeys.
 
-**Use Lovable**
-
-Simply visit the [Lovable Project](https://lovable.dev/projects/823f7212-8bab-469e-bb0f-1a59745c7088) and start prompting.
-
-Changes made via Lovable will be committed automatically to this repo.
-
-**Use your preferred IDE**
-
-If you want to work locally using your own IDE, you can clone this repo and push changes. Pushed changes will also be reflected in Lovable.
-
-The only requirement is having Node.js & npm installed - [install with nvm](https://github.com/nvm-sh/nvm#installing-and-updating)
-
-Follow these steps:
-
-```sh
-# Step 1: Clone the repository using the project's Git URL.
-git clone <YOUR_GIT_URL>
-
-# Step 2: Navigate to the project directory.
-cd <YOUR_PROJECT_NAME>
-
-# Step 3: Install the necessary dependencies.
-npm i
-
-# Step 4: Start the development server with auto-reloading and an instant preview.
-npm run dev
-```
-
-**Edit a file directly in GitHub**
-
-- Navigate to the desired file(s).
-- Click the "Edit" button (pencil icon) at the top right of the file view.
-- Make your changes and commit the changes.
-
-**Use GitHub Codespaces**
-
-- Navigate to the main page of your repository.
-- Click on the "Code" button (green button) near the top right.
-- Select the "Codespaces" tab.
-- Click on "New codespace" to launch a new Codespace environment.
-- Edit files directly within the Codespace and commit and push your changes once you're done.
-
-## What technologies are used for this project?
-
-This project is built with:
-
-- Vite
-- TypeScript
-- React
-- shadcn-ui
-- Tailwind CSS
-
-## How can I deploy this project?
-
-Simply open [Lovable](https://lovable.dev/projects/823f7212-8bab-469e-bb0f-1a59745c7088) and click on Share -> Publish.
-
-## Can I connect a custom domain to my Lovable project?
-
-Yes, you can!
-
-To connect a domain, navigate to Project > Settings > Domains and click Connect Domain.
-
-Read more here: [Setting up a custom domain](https://docs.lovable.dev/features/custom-domain#custom-domain)
-# VietJet
+# Technology Stack (Suggested)
+	•	Frontend: React / Next.js / Tailwind CSS
+	•	Backend: Node.js / Express.js
+	•	Database: Supabase
+	•	AI Layer: OpenAI-based personalization and content filtering
+	•	Animations: Framer Motion / GSAP
